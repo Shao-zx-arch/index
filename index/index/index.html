@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蜡笔小新主题网页</title>
+    <style>
+        body {
+            background-color: #FFF6CC;
+        }
+        .video-container {
+            display: flex;
+            align-items: flex-start;
+        }
+        iframe {
+            margin-right: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: auto;
+        }
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 标题，块级元素 -->
+    <h1>欢迎来到蜡笔小新的世界</h1>
+    <!-- 段落，块级元素 -->
+    <p>蜡笔小新是一部非常受欢迎的日本动漫，讲述了野原新之助一家的日常生活趣事。</p>
+
+    <!-- 行内元素 - 图片 -->
+    <img src="https://tse2-mm.cn.bing.net/th/id/OIP-C.TzebNo2no8VI9HrkEKQndAHaFj?w=202&h=152&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="蜡笔小新" />
+
+    <!-- 列表 - 有序列表 -->
+    <ol>
+        <li>野原新之助</li>
+        <li>野原美冴</li>
+        <li>野原广志</li>
+    </ol>
+
+    <!-- 列表 - 无序列表 -->
+    <ul>
+        <li>动感光波</li>
+        <li>屁屁舞</li>
+        <li>大象歌</li>
+    </ul>
+
+    <!-- 逻辑区块 -->
+    <div>
+        <p>这里是关于蜡笔小新的一些有趣小知识。</p>
+    </div>
+
+    <!-- 文本语义元素 - 链接 -->
+    <a href="https://baike.baidu.com/item/%E8%9C%A1%E7%AC%94%E5%B0%8F%E6%96%B0/29538">了解更多关于蜡笔小新的信息</a>
+
+    <!-- 视频上方标题 -->
+    <h2>请欣赏小新的视频~</h2>
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.bilibili.com/video/BV1fb4y1h7QF/?spm_id_from=333.337.search-card.all.click&vd_source=87910d5ab7535fb40ccc452f9e9271c9" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- 这里可以添加视频右侧想要显示的内容 -->
+    </div>
+
+    <!-- 嵌入内容元素 - svg -->
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+    </svg>
+
+    <!-- 表格 -->
+    <table>
+        <thead>
+            <tr>
+                <th>角色</th>
+                <th>年龄</th>
+                <th>特点</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>野原新之助</td>
+                <td>5岁</td>
+                <td>调皮可爱</td>
+            </tr>
+            <tr>
+                <td>野原美冴</td>
+                <td>29岁</td>
+                <td>爱唠叨</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- 表单 -->
+    <form action="#">
+        <label for="name">你的名字:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="message">留言:</label>
+        <textarea id="message" name="message"></textarea><br>
+        <select id="favorite" name="favorite">
+            <option value="shinchan">野原新之助</option>
+            <option value="misaeko">野原美冴</option>
+            <option value="hiroshi">野原广志</option>
+        </select><br>
+        <button type="submit">提交</button>
+    </form>
+</body>
+
+</html>
