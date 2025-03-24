@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS练习</title>
+    <link rel="stylesheet" href="styles\main.css">
+    <style>
+        h2{
+            font-family: 'Courier New', Courier, monospace;
+            text-decoration: underline;
+            color: blueviolet;
+        }
+        /* 为外部样式应用楷体 */
+        .external-style {
+            font-family: "KaiTi", serif;
+        }
+        /* 为内部样式应用宋体 */
+        .internal-style {
+            font-family: "SimSun", serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS练习</h1>
+    <div>
+        <h2>www使用样式表的三种方式</h2>
+        <ul>
+            <li class="external-style" style="color: cornflowerblue;">外部样式</li>
+            <li class="internal-style" style="color: brown;">内部样式</li>
+            <li style="color: aqua; font-family: 'Microsoft YaHei', sans-serif;">内嵌样式</li>
+        </ul>
+    </div>
+</body>
+</html>
