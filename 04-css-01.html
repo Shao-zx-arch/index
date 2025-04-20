@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS核心概念:背景,盒模型,布局,动画</title>
+    <style>
+        /* 全局样式 */
+        :root {
+            --primary-color: #FF9AA2; /* 粉色 */
+            --secondary-color: #FFB7B2; /* 浅粉色 */
+            --accent-color: #FFDAC1; /* 浅橙色 */
+            --dark-color: #B5EAD7; /* 薄荷绿 */
+            --light-color: #E2F0CB; /* 浅绿色 */
+            --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Comic Sans MS', 'Marker Felt', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #5a5a5a;
+            background-color: #FFF5F5;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* 页面容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* 标题样式 */
+        h1 {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin: 0 0 30px 0;
+            border-radius: 50px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            font-size: 2.2em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 3px dotted var(--accent-color);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            font-size: 1.8em;
+        }
+        
+        h3 {
+            color: var(--dark-color);
+            font-size: 1.4em;
+            margin-top: 25px;
+        }
+        
+        /* 章节样式 */
+        section {
+            background-color: white;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 2px solid var(--light-color);
+        }
+        
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            border-color: var(--primary-color);
+        }
+        
+        /* 盒模型示例 */
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 4px dotted var(--primary-color);
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 50px 10px 50px 10px;
+            background-color: var(--light-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            font-size: 1.2em;
+        }
+        
+        .box:hover {
+            transform: rotate(5deg) scale(1.05);
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--dark-color);
+            border-style: solid;
+        }
+        
+        /* 布局示例 */
+        .display-demo p {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 8px 15px;
+            margin: 5px;
+            border-radius: 50px;
+            transition: var(--transition);
+            font-weight: bold;
+        }
+        
+        .display-demo p:hover {
+            background-color: var(--accent-color);
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .flex-container p {
+            flex: 1;
+            min-width: 150px;
+            border: 2px dashed var(--primary-color);
+            padding: 15px;
+            border-radius: 15px;
+            background-color: rgba(255, 154, 162, 0.1);
+            transition: var(--transition);
+            text-align: center;
+            font-size: 1.1em;
+        }
+        
+        .flex-container p:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-5px) scale(1.05);
+            border-style: solid;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        /* 动画示例 */
+        .animate-box {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            line-height: 150px;
+            margin: 30px auto;
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+        
+        .animate-box:hover {
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            background: linear-gradient(45deg, var(--accent-color), var(--primary-color));
+            transform: scale(1.1) rotate(15deg);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .flex-container {
+                flex-direction: column;
+            }
+            
+            .flex-container p {
+                min-width: 100%;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+                padding: 30px 15px;
+            }
+        }
+        
+        /* 工具提示 */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted var(--dark-color);
+            cursor: help;
+        }
+        
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            border-radius: 15px;
+            padding: 10px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 0.9em;
+        }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        /* 代码样式 */
+        code {
+            background-color: #f4f4f4;
+            padding: 3px 6px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            color: var(--accent-color);
+            font-size: 0.9em;
+            border: 1px solid #ddd;
+        }
+        
+        /* 列表样式 */
+        ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        li::before {
+            content: "🌸";
+            position: absolute;
+            left: 0;
+        }
+        
+        /* 添加一些装饰元素 */
+        .decoration {
+            position: fixed;
+            font-size: 24px;
+            opacity: 0.3;
+            z-index: -1;
+            animation: float 5s infinite ease-in-out;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+        
+        /* 页脚样式 */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: var(--primary-color);
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <!-- 装饰元素 -->
+    <div class="decoration" style="top: 10%; left: 5%;">✿</div>
+    <div class="decoration" style="top: 30%; right: 8%;">❀</div>
+    <div class="decoration" style="bottom: 20%; left: 10%;">♡</div>
+    <div class="decoration" style="bottom: 40%; right: 5%;">✧</div>
+    
+    <div class="container">
+        <h1>CSS核心概念:背景,盒模型,布局,动画</h1>
+        
+        <section>
+            <h2>背景 (Background)</h2>
+            <div>
+                <p>CSS 背景属性可以为元素设置各种漂亮的背景效果。</p>
+                <p>常用背景属性：</p>
+                <ul>
+                    <li><code>background-color</code> - 设置背景颜色</li>
+                    <li><code>background-image</code> - 设置背景图片</li>
+                    <li><code>background-repeat</code> - 控制背景图片是否重复</li>
+                    <li><code>background-position</code> - 设置背景图片位置</li>
+                    <li><code>background-size</code> - 控制背景图片尺寸</li>
+                    <li><code>background-attachment</code> - 控制背景图片是否随页面滚动</li>
+                </ul>
+                <p class="tooltip">CSS 发音提示：
+                    <span class="tooltiptext">
+                        "CSS"读作"C-S-S"，是"Cascading Style Sheets"的缩写
+                    </span>
+                </p>
+            </div>
+        </section>
+        
+        <section>
+            <h2>盒模型 (Box Model)</h2>
+            <div>
+                <p>CSS 盒模型是网页布局的基础，每个元素都被视为一个矩形盒子。</p>
+                <div class="box">盒模型示例 1</div>
+                <div class="box">盒模型示例 2</div>
+                <p>盒模型相关属性：</p>
+                <ul>
+                    <li><code>width</code>/<code>height</code> - 内容区域宽高</li>
+                    <li><code>padding</code> - 内边距</li>
+                    <li><code>border</code> - 边框</li>
+                    <li><code>margin</code> - 外边距</li>
+                    <li><code>box-sizing</code> - 控制盒模型计算方式</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section>
+            <h2>布局 (Layout)</h2>
+            <div>
+                <h3>display 的不同取值</h3>
+                <p>display 属性决定了元素如何显示在页面上：</p>
+                <div class="display-demo">
+                    <p>inline</p>
+                    <p>block</p>
+                    <p>inline-block</p>
+                    <p style="visibility: hidden">hidden</p>
+                    <p>flex</p>
+                    <p>grid</p>
+                </div>
+                
+                <h3>Flexbox 弹性布局</h3>
+                <p>Flexbox 是一种现代的布局方式，可以轻松实现各种复杂布局：</p>
+                <div class="flex-container">
+                    <p>项目1</p>
+                    <p>项目2</p>
+                    <p>项目3</p>
+                    <p>项目4</p>
+                </div>
+                <p>常用 Flexbox 属性：</p>
+                <ul>
+                    <li><code>display: flex</code> - 创建 flex 容器</li>
+                    <li><code>flex-direction</code> - 主轴方向</li>
+                    <li><code>justify-content</code> - 主轴对齐方式</li>
+                    <li><code>align-items</code> - 交叉轴对齐方式</li>
+                    <li><code>flex-wrap</code> - 是否换行</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section>
+            <h2>动画 (Animation)</h2>
+            <div>
+                <p>CSS 动画可以为网页添加生动的交互效果，提升用户体验。</p>
+                <p>动画三要素：起始状态、结束状态、持续时间。</p>
+                <p>将鼠标悬停在下面的盒子上查看动画效果：</p>
+                <div class="animate-box">悬停动画</div>
+                <p>常用动画属性：</p>
+                <ul>
+                    <li><code>transition</code> - 过渡效果</li>
+                    <li><code>@keyframes</code> - 关键帧动画</li>
+                    <li><code>animation</code> - 动画简写属性</li>
+                    <li><code>transform</code> - 变形效果</li>
+                </ul>
+            </div>
+        </section>
+        
+        <footer>
+            <p>❤️ CSS核心概念学习 ❤️</p>
+        </footer>
+    </div>
+</body>
+</html>
