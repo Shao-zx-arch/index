@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "title": "智能问答雅集",
+    "description": "以iframe嵌入外部智能问答服务，如古人雅集论道，展现第三方服务集成之妙。",
+    "link": "/practice/embed-demo",
+    "imageUrl": "/practice/images/1.png",
+    "tags": ["集成", "iframe", "智能问答"]
+  },
+  {
+    "id": 2,
+    "title": "React初学心得",
+    "description": "初涉React组件化开发，如初学书法，一笔一划皆有意，展现组件化之美。",
+    "link": "/practice/my-app",
+    "imageUrl": "/practice/images/2.png",
+    "tags": ["React", "组件化"]
+  },
+  {
+    "id": 3,
+    "title": "选择器之道",
+    "description": "万物有形，皆有其选。CSS选择器如古人识人之法，各有妙用，基础而深刻。",
+    "link": "/practice/03-css-01",
+    "imageUrl": "/practice/images/3.png",
+    "tags": ["CSS", "选择器"]
+  },
+  {
+    "id": 4,
+    "title": "样式三法",
+    "description": "内外兼修，层次分明。CSS引入之法，如古人治学，各有门径，各显其能。",
+    "link": "/practice/03-css-02",
+    "imageUrl": "/practice/images/4.png",
+    "tags": ["CSS", "样式引入"]
+  },
+  {
+    "id": 5,
+    "title": "盒模型与布局之美",
+    "description": "方寸之间，乾坤自有。CSS核心概念如古建之法，层次井然，美轮美奂。",
+    "link": "/practice/04-css-01",
+    "imageUrl": "/practice/images/1.png",
+    "tags": ["CSS", "盒模型"]
+  },
+  {
+    "id": 6,
+    "title": "定位之术",
+    "description": "如棋盘布子，各有其位。CSS定位如古人排兵布阵，精准制胜，妙不可言。",
+    "link": "/practice/04-css-02",
+    "imageUrl": "/practice/images/2.png",
+    "tags": ["CSS", "定位"]
+  },
+  {
+    "id": 7,
+    "title": "相对定位之妙",
+    "description": "如流水绕石，虽有偏移，不失本源。相对定位之道，在于守中有变。",
+    "link": "/practice/04-css-02-relative",
+    "imageUrl": "/practice/images/3.png",
+    "tags": ["CSS", "相对定位"]
+  },
+  {
+    "id": 8,
+    "title": "古韵新闻",
+    "description": "以古典之美，传今日之音。HTML与CSS构建的静态新闻页面，雅致而实用。",
+    "link": "/practice/05-news01",
+    "imageUrl": "/practice/images/4.png",
+    "tags": ["HTML", "新闻页面"]
+  },
+  {
+    "id": 9,
+    "title": "交互新闻雅韵",
+    "description": "JavaScript赋予页面灵动之美，如古琴弹奏，动静相宜，交互自然。",
+    "link": "/practice/06-news01",
+    "imageUrl": "/practice/images/1.png",
+    "tags": ["JavaScript", "交互"]
+  },
+  {
+    "id": 10,
+    "title": "新闻布局精工",
+    "description": "更精妙的页面布局与脚本设计，如工匠精雕细琢，每个细节都追求完美。",
+    "link": "/practice/06-news02",
+    "imageUrl": "/practice/images/2.png",
+    "tags": ["JavaScript", "精工布局"]
+  },
+  {
+    "id": 11,
+    "title": "异步编程初探",
+    "description": "Promise与async/await如太极阴阳，异步有序，静待花开，编程之禅意。",
+    "link": "/practice/07-async-01",
+    "imageUrl": "/practice/images/3.png",
+    "tags": ["JavaScript", "异步编程"]
+  },
+  {
+    "id": 12,
+    "title": "Fetch API雅韵",
+    "description": "fetch API如信使传书，异步数据获取实践，远程调用，信息流转如诗。",
+    "link": "/practice/07-async-02",
+    "imageUrl": "/practice/images/4.png",
+    "tags": ["JavaScript", "API调用"]
+  },
+  {
+    "id": 13,
+    "title": "原始首页古韵",
+    "description": "最初的静态HTML首页，如古朴素雅的书卷，简约而不失韵味，返璞归真。",
+    "link": "/practice/index",
+    "imageUrl": "/practice/images/1.png",
+    "tags": ["HTML", "古韵首页"]
+  }
+] 
